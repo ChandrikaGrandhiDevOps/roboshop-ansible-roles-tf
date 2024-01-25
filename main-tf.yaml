@@ -1,6 +1,6 @@
 - name: "install {{component}}"
   hosts: localhost
-  coonection: local
+  connection: local
   vars_files:
   - variabels-{{env}}.yaml
   become: yes
