@@ -1,0 +1,8 @@
+- name: "stop {{component}}"
+  service:
+    name: "{{component}}"
+    state: stopped
+- name: recursivly
+  file:
+    path: "/app"
+    state: absent    

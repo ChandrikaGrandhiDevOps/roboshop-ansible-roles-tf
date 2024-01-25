@@ -1,0 +1,11 @@
+CART_HOST: cart-dev.grobo.shop
+REDIS_HOST: redis-dev.grobo.shop
+USER_HOST: user-dev.grobo.shop
+CATALOGUE_HOST: catalogue-dev.grobo.shop
+MONGODB_HOST: mongodb-dev.grobo.shop
+RABBITMQ_HOST: rabbitmq-dev.grobo.shop
+
+SHIPPINH_HOST: shipping-dev.grobo.shop
+PAYMENT_HOST: payment-dev.grobo.shop
+DISPATCH_HOST: dispatch-dev.grobo.shop
+MYSQL_HOST: mysql-dev.grobo.shop

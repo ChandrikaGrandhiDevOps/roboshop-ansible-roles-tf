@@ -1,0 +1,47 @@
+- name: install maven
+  dnf:
+    name: maven
+    state: present
+- name: appsetup
+  import_role:
+    name: common
+    tasks_from: app-setup
+
+- name:      
+  command: mvn clean package
+  args:
+      chdir: /app 
+      
+- name: 
+  command: mv target/shipping-1.0.jar shipping.jar  
+  args: 
+      chdir: /app    
+
+- name: restarting
+  import_role:
+    name: common
+    tasks_from:  systemd.yaml
+
+- name: 
+  dnf:
+    name: mysql
+    state: present  
+
+- name:
+  command: mysql -h mysql.grobo.shop -uroot -p{{mysql_password}} -sN -e "SELECT COUNT(*) FROM INFORMATION_SCHEMA.SCHEMATA  WHERE SCHEMA_NAME = 'cities'"
+  register: schema
+
+- name: output
+  debug:
+    msg: "schema output: {{schema}}"  
+
+- name: load cities data
+  shell: mysql -h mysql.grobo.shop -uroot -p{{mysql_password}} < /app/schema/shipping.sql 
+  when: schema.stdout != "1"   
+        
+
+- name: 
+  service:
+    name: shipping
+    enabled: yes
+    state: restarted
