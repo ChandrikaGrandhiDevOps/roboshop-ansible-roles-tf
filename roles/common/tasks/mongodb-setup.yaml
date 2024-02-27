@@ -8,15 +8,15 @@
     name: mongodb-org-shell
     state:  present
 
-- name: "get catalogue count"
-  ansible.builtin.shell: mongo --host {{MONGODB_HOST}} --quiet --eval 'db =db. getSiblingDB("catalogue"); db.products.count()'
-  register: products_count
-  when: component == "catalogue"
+# - name: "get catalogue count"
+#   ansible.builtin.shell: mongo --host {{MONGODB_HOST}} --quiet --eval 'db =db. getSiblingDB("catalogue"); db.products.count()'
+#   register: products_count
+#   when: component == "catalogue"
 
-- name: "get user count"
-  ansible.builtin.shell: mongo --host {{MONGODB_HOST}} --quiet --eval 'db =db. getSiblingDB("user"); db.products.count()'    
-  register: users_count
-  when: component == "user" 
+# - name: "get user count"
+#   ansible.builtin.shell: mongo --host {{MONGODB_HOST}} --quiet --eval 'db =db. getSiblingDB("user"); db.products.count()'    
+#   register: users_count
+#   when: component == "user" 
 
 # - name: print the count
 #   debug:
