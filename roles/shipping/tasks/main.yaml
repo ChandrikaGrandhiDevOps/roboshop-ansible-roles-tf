@@ -28,7 +28,7 @@
     state: present  
 
 - name:
-  command: mysql -h mysql.grobo.shop -uroot -p{{mysql_password}} -sN -e "SELECT COUNT(*) FROM INFORMATION_SCHEMA.SCHEMATA  WHERE SCHEMA_NAME = 'cities'"
+  command: mysql -h mysql.nariops.online -uroot -p{{mysql_password}} -sN -e "SELECT COUNT(*) FROM INFORMATION_SCHEMA.SCHEMATA  WHERE SCHEMA_NAME = 'cities'"
   register: schema
 
 - name: output
@@ -36,7 +36,7 @@
     msg: "schema output: {{schema}}"  
 
 - name: load cities data
-  shell: mysql -h mysql.grobo.shop -uroot -p{{mysql_password}} < /app/schema/shipping.sql 
+  shell: mysql -h mysql.nariops.online -uroot -p{{mysql_password}} < /app/schema/shipping.sql 
   when: schema.stdout != "1"   
         
 
