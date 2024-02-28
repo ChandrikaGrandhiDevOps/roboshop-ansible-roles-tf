@@ -1,11 +1,11 @@
-CART_HOST: cart-prod.nariops.online
-REDIS_HOST: redis-prod.nariops.online
-USER_HOST: user-prod.nariops.online
-CATALOGUE_HOST: catalogue-prod.nariops.online
-MONGODB_HOST: mongodb-prod.nariops.online
-RABBITMQ_HOST: rabbitmq-prod.nariops.online
+CART_HOST: cart-prod.grobo.shop
+REDIS_HOST: redis-prod.grobo.shop
+USER_HOST: user-prod.grobo.shop
+CATALOGUE_HOST: catalogue-prod.grobo.shop
+MONGODB_HOST: mongodb-prod.grobo.shop
+RABBITMQ_HOST: rabbitmq-prod.grobo.shop
 
-SHIPPINH_HOST: shipping-prod.nariops.online
-PAYMENT_HOST: payment-prod.nariops.online
-DISPATCH_HOST: dispatch-prod.nariops.online
-MYSQL_HOST: mysql-prod.nariops.online
+SHIPPINH_HOST: shipping-prod.grobo.shop
+PAYMENT_HOST: payment-prod.grobo.shop
+DISPATCH_HOST: dispatch-prod.grobo.shop
+MYSQL_HOST: mysql-prod.grobo.shop
