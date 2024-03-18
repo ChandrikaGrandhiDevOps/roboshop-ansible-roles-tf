@@ -6,5 +6,5 @@ MONGODB_HOST: mongodb-dev.grobo.shop
 RABBITMQ_HOST: rabbitmq-dev.grobo.shop
 SHIPPING_HOST: shipping.app-dev.grobo.shop
 PAYMENT_HOST: payment.app-dev.grobo.shop
-DISPATCH_HOST: dispatch-dev.grobo.shop
+DISPATCH_HOST: dispatch.app-dev.grobo.shop
 MYSQL_HOST: mysql-dev.grobo.shop
